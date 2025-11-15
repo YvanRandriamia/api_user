@@ -7,4 +7,12 @@ on:
       - develop
       - prod
 jobs:
-  deploy: [self-hosted, linux, x64,local-vm]
+  deploy: self-hosted
+  steps:
+    - name: Ensure docker compose file is present
+      run: |
+        ls -la
+        docker --version || echo "Docker not found"
+        docker compose --version || echo "dcr-cmp not found"
+    - name: "run docker container"
+      run: docker compose up --build -d
