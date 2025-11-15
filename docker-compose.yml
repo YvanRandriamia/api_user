@@ -8,3 +8,4 @@ services:
       image: users_api
       ports:
         - 8000:8000
+        

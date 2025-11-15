@@ -1,1 +1,10 @@
 name: Deploy to remote server
+
+on: 
+  push: 
+    branches: 
+      - main
+      - develop
+      - prod
+jobs:
+  deploy: [self-hosted, linux, x64,local-vm]
