@@ -7,5 +7,5 @@ services:
       container_name: users_api
       image: users_api
       ports:
-        - 8000:8000
+        - 8080:8080
         

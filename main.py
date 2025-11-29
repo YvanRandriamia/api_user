@@ -1,9 +1,6 @@
 from fastapi import FastAPI
-
 app = FastAPI()
-
 @app.get("/")
+data = [{"id":1, "name":"rasoa", "email":"rasa@gmail.com"}]
 def getusers():
-    data = [{"name":"rasoa", "email":"rasa@gmail.com"}]
-    return {
-        "status":"success", "msg": "displayed successfully", "data": data}
+    return {"status":"success", "msg": "displayed successfully", "data": data}
